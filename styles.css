@@ -1,0 +1,148 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  .header {
+    background-image: url('placeholder.svg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+  }
+  
+  .header .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .header .container {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .navbar .menu {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .navbar .menu a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+  }
+  
+  #searchBar {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 20px;
+  }
+  
+  /* Grid */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    background: white;
+    transition: box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #2b7bba;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+  }
+  .container{
+    padding: 30px;
+  }
+  .boton{
+    display: block;
+    text-align: center;
+    padding-top: 5px;
+    background-color: #2b7bba;
+    border: #2b7bba 1px solid;
+    color: #ffff;
+    height: 30px;
+    width: 100px;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  /* Media Queries */
+  @media (min-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .menu-toggle {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .navbar .menu {
+      display: none;
+    }
+  
+    .menu-toggle {
+      display: block;
+    }
+  
+    .navbar.active .menu {
+      display: block;
+      background-color: white;
+      color: black;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      text-align: center;
+    }
+  
+    .navbar.active .menu a {
+      color: black;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
